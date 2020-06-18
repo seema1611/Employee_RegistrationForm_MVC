@@ -22,7 +22,6 @@ public class RegistrationController {
     static String EMAIL_ID = "^[A-Za-z]{3,}([.|+|_|-]?[A-Za-z0-9]+)?[@][A-Za-z0-9]+[.][A-Za-z]{2,4}([.][A-Za-z]{2,4}+)?$";
     static String ADDRESS_PATTERN = "^[A-Z][a-z]{1,}$";
     static String SALARY_PATTERN = "^[0-9]{2,}$";
-    static String POSITION_PATTERN = "^[A-Z][a-z]{2,}$";
     static String REGEX_PASSWORD = "^((?=[^@|#|&|%|$]*[@|&|#|%|$][^@|#|&|%|$]*$)(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9#@$?]{8,})$";
 
     @RequestMapping(value = "/registerProcess", method = RequestMethod.GET)
@@ -53,7 +52,7 @@ public class RegistrationController {
             boolean emailMatch = emailId.matches(EMAIL_ID);
             boolean addressMatch = address.matches(ADDRESS_PATTERN);
             boolean salaryMatch = salary.matches(SALARY_PATTERN);
-            boolean positionMatch = position.matches(POSITION_PATTERN);
+            boolean positionMatch = position.contains(position);
             boolean passwordMatch = password.matches(REGEX_PASSWORD);
 
             if (nameMatch && passwordMatch && addressMatch && emailMatch && salaryMatch && positionMatch) {

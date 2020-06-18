@@ -29,7 +29,13 @@
         </div>
 
         <div>
-            <input type="text" name="position" placeholder="Enter position" required>
+            <select name="position" placeholder="Enter position" required>
+                <option>Mumbai</option>
+                <option>Pune</option>
+                <option>Hyderabad</option>
+                <option>Banglore</option>
+                <option>Other</option>
+            </select>
         </div>
 
         <div>
