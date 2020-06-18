@@ -20,23 +20,32 @@
             <input type="text" name="email" placeholder="Enter email" required>
         </div>
 
-        <div>
-            <input type="text" name="address" placeholder="Enter address" required>
+        <div class = "dropdown_container">
+            <select class = "my_dropdown" name="address" placeholder="Enter address" id="my_addressDropdown">
+                <option></option>
+                <option>Chennai</option>
+                <option>Mumbai</option>
+                <option>Pune</option>
+                <option>Hyderabad</option>
+                <option>Banglore</option>
+                <option>Other</option>
+            </select>
         </div>
+
 
         <div>
             <input type="number" name="salary" placeholder="Enter salary" required>
         </div>
 
         <div class = "dropdown_container">
-            <select class = "my_dropdown" name="position" placeholder="Enter position" id="my_dropdown">
-                <option value="1"></option>
-                <option value="2">Chennai</option>
-                <option value="3">Mumbai</option>
-                <option value="4">Pune</option>
-                <option value="5">Hyderabad</option>
-                <option value="6">Banglore</option>
-                <option value="7">Other</option>
+            <select class = "my_dropdown" name="position" placeholder="Enter position" id="my_positionDropdown">
+                <option></option>
+                <option>Software Enginner</option>
+                <option>Software Developer</option>
+                <option>Software Tester</option>
+                <option>HR</option>
+                <option>Accountant</option>
+                <option>Other</option>
             </select>
         </div>
 

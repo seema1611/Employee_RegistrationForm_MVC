@@ -20,9 +20,7 @@ import java.io.PrintWriter;
 public class RegistrationController {
     static String NAME_PATTERN = "^[A-Z][a-z]{2,}$";
     static String EMAIL_ID = "^[A-Za-z]{3,}([.|+|_|-]?[A-Za-z0-9]+)?[@][A-Za-z0-9]+[.][A-Za-z]{2,4}([.][A-Za-z]{2,4}+)?$";
-    static String ADDRESS_PATTERN = "^[A-Z][a-z]{1,}$";
-    static String SALARY_PATTERN = "^[0-9]{2,}$";
-    static String REGEX_PASSWORD = "^((?=[^@|#|&|%|$]*[@|&|#|%|$][^@|#|&|%|$]*$)(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9#@$?]{8,})$";
+    static String REGEX_PASSWORD ="^((?=[^@|#|&|%|$]*[@|&|#|%|$][^@|#|&|%|$]*$)(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9#@$?]{8,})$";
 
     @RequestMapping(value = "/registerProcess", method = RequestMethod.GET)
     public void showRegister(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
@@ -49,13 +47,19 @@ public class RegistrationController {
 
             System.out.println("hi reg");
             boolean nameMatch = name.matches(NAME_PATTERN);
+            System.out.println(nameMatch);
             boolean emailMatch = emailId.matches(EMAIL_ID);
-            boolean addressMatch = address.matches(ADDRESS_PATTERN);
-            boolean salaryMatch = salary.matches(SALARY_PATTERN);
+            System.out.println(emailMatch);
+            boolean addressMatch = address.contains(address);
+            System.out.println(addressMatch);
+            boolean salaryMatch = salary.matches(salary);
+            System.out.println(salaryMatch);
             boolean positionMatch = position.contains(position);
+            System.out.println(positionMatch);
             boolean passwordMatch = password.matches(REGEX_PASSWORD);
+            System.out.println(passwordMatch);
 
-            if (nameMatch && passwordMatch && addressMatch && emailMatch && salaryMatch && positionMatch) {
+            if (nameMatch && emailMatch && addressMatch  && salaryMatch && positionMatch && passwordMatch ) {
                 System.out.println("req " + req);
                 System.out.println("res " + res);
 
