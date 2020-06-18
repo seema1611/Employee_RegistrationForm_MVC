@@ -30,12 +30,13 @@
 
         <div class = "dropdown_container">
             <select class = "my_dropdown" name="position" placeholder="Enter position" id="my_dropdown">
-                <option value="1">Chennai</option>
-                <option value="2">Mumbai</option>
-                <option value="3">Pune</option>
-                <option value="4">Hyderabad</option>
-                <option value="5">Banglore</option>
-                <option value="6">Other</option>
+                <option value="1"></option>
+                <option value="2">Chennai</option>
+                <option value="3">Mumbai</option>
+                <option value="4">Pune</option>
+                <option value="5">Hyderabad</option>
+                <option value="6">Banglore</option>
+                <option value="7">Other</option>
             </select>
         </div>
 

@@ -30,8 +30,8 @@ div.dropdown_container {
 }
 
 select.my_dropdown {
-    width: 300px;
-    margin-top: inherit;
+    width: 30%;
+    margin-top: 2%
 }
 select:focus#my_dropdown {
     width: 300px;

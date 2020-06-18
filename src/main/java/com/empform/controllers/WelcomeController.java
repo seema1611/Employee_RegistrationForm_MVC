@@ -35,6 +35,6 @@ public class WelcomeController {
     @RequestMapping(path = "/index", method = RequestMethod.GET)
     public String index() {
         System.out.println("inside index");
-        return "/index.jsp";
+        return "index";
     }
 }
