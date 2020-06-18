@@ -24,3 +24,15 @@ input{
     box-shadow: 0px 0px 10px silver;
     background-color: white;
 }
+
+div.dropdown_container {
+    width: 300px;
+}
+
+select.my_dropdown {
+    width: 300px;
+    margin-top: inherit;
+}
+select:focus#my_dropdown {
+    width: 300px;
+}
